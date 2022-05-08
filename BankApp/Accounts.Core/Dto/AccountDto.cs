@@ -1,4 +1,4 @@
-﻿namespace Accounts.Core;
+﻿namespace Accounts.Core.Dto;
 
 public class Account
 {

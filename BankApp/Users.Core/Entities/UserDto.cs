@@ -1,4 +1,4 @@
-﻿namespace Users.Core.EntitiesDto;
+﻿namespace Users.Core.Entities;
 
 public class User
 {
