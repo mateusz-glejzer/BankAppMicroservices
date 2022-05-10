@@ -2,9 +2,9 @@
 
 public interface IAccountRepository
 {
-    Task<Account> GetAsync(Guid id);
-    Task AddAsync(Account account);
-    Task ChangeAsync(Account account);
-    Task DeleteAsync(Account account);
-    Task<IReadOnlyList<Account>> BrowseAsync();
+    Task<AccountService> GetAsync(Guid id);
+    Task AddAsync(AccountService accountService);
+    Task ChangeAsync(AccountService accountService);
+    Task DeleteAsync(AccountService accountService);
+    Task<IReadOnlyList<AccountService>> BrowseAsync();
 }

@@ -7,5 +7,4 @@ public class Account
     public Currency Currency { get; set; }
     public double Balance { get; set; }
     public bool IsLocked { get; set; }
-    public uint Version { get; set; }
 }

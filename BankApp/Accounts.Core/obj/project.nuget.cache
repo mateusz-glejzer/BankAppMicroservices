@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "TGR6IlwVFdr4aASDjGR5yMJudoS/xE1TCKCsib6WFyEbLq4puXLxUHmv0C5gknWZZanRKNdqG9AN8Y4PpTXl+g==",
+  "dgSpecHash": "AjMrG7uHMRIDdmH8VJnzuHpOvJb5ZQtsyDQNbN1uN5KcrilF2ZHue+6vFOH780avF3T9vgk0jS6cYPslP9M+PA==",
   "success": true,
   "projectFilePath": "C:\\Users\\MateuszGlejzer\\Desktop\\BankApi\\BankApp\\Accounts.Core\\Accounts.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0-preview.4.22229.2\\microsoft.entityframeworkcore.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0-preview.4.22229.2\\microsoft.entityframeworkcore.abstractions.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0-preview.4.22229.2\\microsoft.entityframeworkcore.analyzers.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0-preview.4.22229.4\\microsoft.extensions.caching.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0-preview.4.22229.4\\microsoft.extensions.caching.memory.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0-preview.4.22229.4\\microsoft.extensions.dependencyinjection.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0-preview.4.22229.4\\microsoft.extensions.dependencyinjection.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0-preview.4.22229.4\\microsoft.extensions.logging.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0-preview.4.22229.4\\microsoft.extensions.logging.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.options\\7.0.0-preview.4.22229.4\\microsoft.extensions.options.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0-preview.4.22229.4\\microsoft.extensions.primitives.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
