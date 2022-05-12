@@ -1,4 +1,4 @@
-﻿namespace Accounts.Core;
+﻿namespace Accounts.Core.Entities;
 
 public enum Currency
 {
