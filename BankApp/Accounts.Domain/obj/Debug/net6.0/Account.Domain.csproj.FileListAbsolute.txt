@@ -1,0 +1,5 @@
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Account.Domain\obj\Debug\net6.0\Account.Domain.csproj.AssemblyReference.cache
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Account.Domain\obj\Debug\net6.0\Account.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Account.Domain\obj\Debug\net6.0\Account.Domain.AssemblyInfoInputs.cache
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Account.Domain\obj\Debug\net6.0\Account.Domain.AssemblyInfo.cs
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Account.Domain\obj\Debug\net6.0\Account.Domain.csproj.CoreCompileInputs.cache

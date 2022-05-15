@@ -1,0 +1,12 @@
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\Accounts.Api.deps.json
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\Accounts.Api.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\Accounts.Api.pdb
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\Accounts.Api.csproj.AssemblyReference.cache
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\Accounts.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\Accounts.Api.AssemblyInfoInputs.cache
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\Accounts.Api.AssemblyInfo.cs
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\Accounts.Api.csproj.CoreCompileInputs.cache
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\Accounts.Api.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\refint\Accounts.Api.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\Accounts.Api.pdb
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\obj\Debug\net6.0\ref\Accounts.Api.dll

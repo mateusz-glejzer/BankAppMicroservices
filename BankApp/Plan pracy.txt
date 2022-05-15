@@ -1,0 +1,19 @@
+Aplikacja Bankowa
+
+1.Stwórz Encje konta
+2.Stwórz Encje Usera
+3.Stwórz Encje Transakcji
+4.Dodaj zdarzenia dla konta
+5.Dodaj zdarzenia dla User
+6.Dodaj zdarzenia dla Transakcji
+7.Dodaj baze danych do konta
+8.Dodaj baze danych do Usera
+9.Dodaj baze danych do Transakcji
+10.Dodaj komunikacje między serwisowa RabbitMQ
+11.Zrob api gateway
+12.Dodaj Autentyfikacje
+13.Zdockeryzuj ApiGateway
+14.Zdockeryzuj konta
+15.Zdockeryzuj Usera
+16.Zdockeryzuj Transakce
+...
