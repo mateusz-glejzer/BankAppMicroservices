@@ -1,4 +1,4 @@
-﻿namespace Accounts.Core.Commands.Handlers;
+﻿namespace Accounts.Application.Commands.Handlers;
 
 public interface ICommandHandler<in TCommand>
     where TCommand : class, ICommand

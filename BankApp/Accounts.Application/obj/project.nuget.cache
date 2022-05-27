@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HRL1wyhiv3Mh6+VwUjnzl7SJlqXdeEofIm/fDNrMvRTfwecvY4WOutKrp2kbOpqwZaRX4CGaN+pIJzqeI5DJQg==",
+  "dgSpecHash": "Jw3m9k9MzxxEFkhRcJGki+72kK9m0lj9xnE5YNXh/thQtL6LKbg7LAL02LuzQ7dqfD/ctv0CE9B2R3ZOSjbcjQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\MateuszGlejzer\\Desktop\\BankApi\\BankApp\\Accounts.Application\\Accounts.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0-preview.4.22229.2\\microsoft.entityframeworkcore.7.0.0-preview.4.22229.2.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0-preview.4.22229.2\\microsoft.entityframeworkcore.abstractions.7.0.0-preview.4.22229.2.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0-preview.4.22229.2\\microsoft.entityframeworkcore.analyzers.7.0.0-preview.4.22229.2.nupkg.sha512",

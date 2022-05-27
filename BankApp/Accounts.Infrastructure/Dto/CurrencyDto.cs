@@ -1,4 +1,4 @@
-﻿namespace Accounts.Core.Dto;
+﻿namespace Accounts.Infrastructure.Dto;
 
 public enum CurrencyDto
 {

@@ -1,4 +1,6 @@
-﻿namespace Accounts.Core.Queries.Handlers;
+﻿using Accounts.Application.Queries;
+
+namespace Accounts.Infrastructure.Handlers;
 
 public interface IQueryHandler<in TQuery, TResult>
     where TQuery : class, IQuery<TResult>

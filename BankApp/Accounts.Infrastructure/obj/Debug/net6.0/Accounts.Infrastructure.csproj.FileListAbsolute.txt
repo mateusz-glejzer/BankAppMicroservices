@@ -10,3 +10,8 @@ C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\obj\Debu
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\obj\Debug\net6.0\refint\Accounts.Infrastructure.dll
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\obj\Debug\net6.0\Accounts.Infrastructure.pdb
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\obj\Debug\net6.0\ref\Accounts.Infrastructure.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debug\net6.0\Accounts.Application.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debug\net6.0\Accounts.Domain.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debug\net6.0\Accounts.Application.pdb
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debug\net6.0\Accounts.Domain.pdb
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\obj\Debug\net6.0\Accounts.Infrastructure.csproj.CopyComplete

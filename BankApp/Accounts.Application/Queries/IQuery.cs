@@ -1,10 +1,9 @@
-﻿namespace Accounts.Core.Queries;
+﻿namespace Accounts.Application.Queries;
 
 public interface IQuery
 {
-    
 }
 
-public interface IQuery<T> : IQuery
+public interface IQuery<TResult> : IQuery
 {
 }

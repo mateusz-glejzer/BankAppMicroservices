@@ -6,4 +6,21 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Repository" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0-preview.4.22229.4" />
+      <PackageReference Include="MongoDB.Bson" Version="2.15.1" />
+      <PackageReference Include="Scrutor" Version="4.1.0" />
+      <PackageReference Include="Scrutor.AspNetCore" Version="3.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Accounts.Application\Accounts.Application.csproj" />
+      <ProjectReference Include="..\Accounts.Domain\Accounts.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

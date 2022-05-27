@@ -1,4 +1,4 @@
-﻿namespace Accounts.Core.Commands;
+﻿namespace Accounts.Application.Commands;
 
 public interface ICommand
 {
