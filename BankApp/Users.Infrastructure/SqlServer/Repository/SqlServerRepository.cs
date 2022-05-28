@@ -42,8 +42,12 @@ public class SqlServerRepository : IUserRepository
             throw new UserNotFoundException(user.Id);
         }
 
+        userInDb.Email = user.Email;
+        userInDb.Name = user.Name;
+        userInDb.Surname = user.Surname;
         
-        _dbContext.Users.Update();
+        _dbContext.Users.Update(userInDb);
+        await _dbContext.SaveChangesAsync();
     }
 
     public async Task DeleteAsync(Guid id)

@@ -2,7 +2,10 @@
 
 public class CannotChangeClientSurnameException : DomainException
 {
-    public CannotChangeClientSurnameException(string message) : base(message)
+    public override string Code { get; } = "cannot_change_client_Surname";
+    public Guid Id { get; }
+    public CannotChangeClientSurnameException(Guid id) : base($"Cannot change Customer Id:{id} Surname")
     {
+        Id = id;
     }
 }
