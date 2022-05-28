@@ -1,8 +1,9 @@
 ﻿using Users.Application.DTO;
+using Users.Core;
 
 namespace Users.Application.Events;
 
-public class ClientChangedName : IEvent
+public class ClientChangedName : IDomainEvent
 {
     public ClientChangedName(UserDTO user)
     {

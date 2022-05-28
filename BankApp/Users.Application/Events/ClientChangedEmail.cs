@@ -1,8 +1,9 @@
 ﻿using Users.Application.DTO;
+using Users.Core;
 
 namespace Users.Application.Events;
 
-public class ClientChangedEmail : IEvent
+public class ClientChangedEmail : IDomainEvent
 {
     public UserDTO User { get; }
 

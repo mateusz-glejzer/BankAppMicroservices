@@ -1,6 +1,6 @@
 ﻿using Accounts.Application.Queries;
-using Accounts.Application.Repositories;
 using Accounts.Domain.Entities;
+using Accounts.Domain.Repositories;
 
 namespace Accounts.Infrastructure.Handlers;
 

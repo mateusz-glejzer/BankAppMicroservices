@@ -1,9 +1,19 @@
-﻿namespace Accounts.Application.Commands.Handlers;
+﻿using Accounts.Domain.Repositories;
+
+namespace Accounts.Application.Commands.Handlers;
 
 public class UnlockAccountHandler : ICommandHandler<UnlockAccount>
 {
-    public Task HandleAsync(UnlockAccount command)
+    private IAccountRepository _repository;
+
+    public UnlockAccountHandler(IAccountRepository repository)
     {
-        throw new NotImplementedException();
+        _repository = repository;
+    }
+
+    public async Task HandleAsync(UnlockAccount command)
+    {
+        command.BankAccount.IsLocked = false;
+        await _repository.ChangeAsync(command.BankAccount);
     }
 }

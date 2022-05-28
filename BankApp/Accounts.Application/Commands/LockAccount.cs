@@ -1,3 +1,5 @@
-﻿namespace Accounts.Application.Commands;
+﻿using Accounts.Domain.Entities;
 
-public record LockAccount(Guid BankAccount) : ICommand;
+namespace Accounts.Application.Commands;
+
+public record LockAccount(Account BankAccount) : ICommand;

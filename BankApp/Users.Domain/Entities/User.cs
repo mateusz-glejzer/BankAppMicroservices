@@ -4,7 +4,7 @@ namespace Users.Core.Entities;
 
 public class User : AggregateRoot
 {
-    public IEnumerable<Guid> Accounts = new HashSet<Guid>();
+    public List<Guid> Accounts = new ();
     public Guid Id { get; private set; }
     public string Name { get; private set; }
     public string Surname { get; private set; }
@@ -34,5 +34,10 @@ public class User : AggregateRoot
     {
         Surname = surname;
         AddEvent(new ClientChangedSurname(this));
+    }
+
+    public void AddAccount(Guid id)
+    {
+        Accounts.Add(id);
     }
 }

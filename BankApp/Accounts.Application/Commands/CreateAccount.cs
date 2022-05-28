@@ -2,4 +2,4 @@
 
 namespace Accounts.Application.Commands;
 
-public record UnlockAccount(Account BankAccount) : ICommand;
+public record CreateAccount(Account Account) : ICommand;
