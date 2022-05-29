@@ -1,10 +1,14 @@
-﻿namespace Users.Infrastructure.SqlServer.Entities;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Users.Infrastructure.Mongo.Entities;
 
 public class UserEntity
 {
-    public IEnumerable<Guid> Accounts = new HashSet<Guid>();
+    [Key] 
     public Guid Id { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Email { get; set; }
+
+    public List<Guid> Accounts = new();
 }

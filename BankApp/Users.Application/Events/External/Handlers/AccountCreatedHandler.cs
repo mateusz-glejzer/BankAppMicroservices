@@ -14,6 +14,7 @@ public class AccountCreatedHandler:IEventHandler<AccountCreated>
     public async Task HandleAsync(AccountCreated @event)
     {
         var user = await _repository.GetAsync(@event.UserId);
-        user.
+        user.AddAccount(@event.BankAccountId);
+        //TODO update db
     }
 }

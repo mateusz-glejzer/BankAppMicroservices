@@ -15,3 +15,10 @@ C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\n
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\Users.Domain.pdb
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\obj\Debug\net6.0\Users.Infrastructure.csproj.CopyComplete
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\obj\Debug\net6.0\Users.Infrastructure.genruntimeconfig.cache
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\libzstd.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\snappy32.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\snappy64.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\libsnappy64.so
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\libzstd.so
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\libsnappy64.dylib
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users.Infrastructure\bin\Debug\net6.0\libzstd.dylib
