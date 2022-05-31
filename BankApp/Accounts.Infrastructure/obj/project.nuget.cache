@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3i7fLlHb6Rg9F2L8SCkMzhjgSMScXCDlNnEB+/4abyVDNkfPOmeq5r8fr3FVg4cuMKKhwvNF3oXUg/jakMpvcg==",
+  "dgSpecHash": "RG2mmE8T0p3gg71T0FRpsID+VWaWykr5qsuLzTsK+QLJ0ldaHPdF7SLOMn5drE8OpEGBfY438AdShTvhJw0+mg==",
   "success": true,
   "projectFilePath": "C:\\Users\\MateuszGlejzer\\Desktop\\BankApi\\BankApp\\Accounts.Infrastructure\\Accounts.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -40,15 +40,22 @@
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.options\\7.0.0-preview.4.22229.4\\microsoft.extensions.options.7.0.0-preview.4.22229.4.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0-preview.4.22229.4\\microsoft.extensions.primitives.7.0.0-preview.4.22229.4.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\mongodb.bson\\2.15.1\\mongodb.bson.2.15.1.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\plain.rabbitmq\\0.0.0.4\\plain.rabbitmq.0.0.0.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\scrutor\\4.1.0\\scrutor.4.1.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\scrutor.aspnetcore\\3.3.0\\scrutor.aspnetcore.3.3.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.0\\system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512"
   ],
   "logs": []

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Users.Infrastructure.Mongo.Entities;
+namespace Users.Infrastructure.Entities;
 
 public class UserEntity
 {

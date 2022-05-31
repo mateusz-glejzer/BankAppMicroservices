@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Jw3m9k9MzxxEFkhRcJGki+72kK9m0lj9xnE5YNXh/thQtL6LKbg7LAL02LuzQ7dqfD/ctv0CE9B2R3ZOSjbcjQ==",
+  "dgSpecHash": "7GaFmSi12gLmnI1HYUyNaGK3Xh743mUAhd5wyFIFYRcjtlLo59W6H1l69JQiI4V49WpczhVzmRy2L4NF3ZtrlA==",
   "success": true,
   "projectFilePath": "C:\\Users\\MateuszGlejzer\\Desktop\\BankApi\\BankApp\\Accounts.Application\\Accounts.Application.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,15 @@
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0-preview.4.22229.4\\microsoft.extensions.logging.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.options\\7.0.0-preview.4.22229.4\\microsoft.extensions.options.7.0.0-preview.4.22229.4.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0-preview.4.22229.4\\microsoft.extensions.primitives.7.0.0-preview.4.22229.4.nupkg.sha512",
-    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\plain.rabbitmq\\0.0.0.4\\plain.rabbitmq.0.0.0.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

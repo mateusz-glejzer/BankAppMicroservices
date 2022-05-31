@@ -13,6 +13,16 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
 
     public async Task HandleAsync(CreateAccount command)
     {
-        await _repository.AddAsync(command.Account);
+        try
+        {
+            await _repository.AddAsync(command.userId);
+            
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Users.Application.Services;
 using Users.Core.Entities;
+using Users.Core.Repositories;
 
 namespace Users.Api.Controllers;
 
@@ -8,18 +8,18 @@ namespace Users.Api.Controllers;
 [ApiController]
 public class UsersController : ControllerBase
 {
-    private readonly UserService _service;
+    private readonly IUserRepository _repository;
 
-    public UsersController(UserService service)
+    public UsersController(IUserRepository repository)
     {
-        _service=service;
+        _repository = repository;
     }
 
     [HttpGet]
     [Route("getUser/{id}")]
     public ActionResult GetUser(Guid id)
     {
-        var user = _service.GetUser(id);
+        var user = _repository.GetUser(id);
         return Ok(user);
     }
 
@@ -27,7 +27,7 @@ public class UsersController : ControllerBase
     [Route("populate")]
     public async Task<ActionResult> Populate()
     {
-        await _service.Populate();
+        await _repository.Populate();
         return Ok();
     }
 
@@ -35,7 +35,7 @@ public class UsersController : ControllerBase
     [Route("getUsers")]
     public ActionResult GetUsers()
     {
-        var users =_service.GetUsers();
+        var users = _repository.GetUsers();
         return Ok(users);
     }
 
@@ -51,7 +51,7 @@ public class UsersController : ControllerBase
     [Route("changeUser")]
     public async Task<ActionResult> ChangeUser(User user)
     {
-        await _service.ChangeUser(user);
+        await _repository.ChangeUser(user);
         return Ok();
     }
 
@@ -59,7 +59,7 @@ public class UsersController : ControllerBase
     [Route("addUser")]
     public async Task<ActionResult> AddUser(User user)
     {
-        await _service.AddUser(user);
+        await _repository.AddUser(user);
         return Ok();
     }
 }

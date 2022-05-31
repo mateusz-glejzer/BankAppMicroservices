@@ -2,16 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Users.Core.Entities;
 using Users.Core.Exceptions;
-using Users.Infrastructure.Mongo.Entities;
+using Users.Core.Repositories;
+using Users.Infrastructure.Entities;
 
-namespace Users.Application.Services;
+namespace Users.Infrastructure.Repository;
 
-public class UserService : IUserService
+public class SqlServerRepository : IUserRepository
 {
     private readonly UserDbContext _context;
     private readonly Mapper _mapper;
 
-    public UserService(UserDbContext context, Mapper mapper)
+    public SqlServerRepository(UserDbContext context, Mapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -44,7 +45,12 @@ public class UserService : IUserService
 
     public Task ChangeUser(User user)
     {
-        throw new NotImplementedException();
+        var userInDb = _context.Users.FirstOrDefault(u => u.Id == user.Id);
+        if (user is null)
+            throw new UserNotFoundException(user.Id);
+        _context.Update(user);
+        _context.SaveChanges();
+        return Task.CompletedTask;
     }
 
     public Task AddAccountToUser(Guid accountId, Guid userId)

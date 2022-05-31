@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Users.Infrastructure.Mongo.Entities;
+namespace Users.Infrastructure.Entities;
 
 public class UserDbContext : DbContext
 {

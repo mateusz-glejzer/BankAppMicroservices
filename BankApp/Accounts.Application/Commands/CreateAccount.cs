@@ -1,5 +1,3 @@
-﻿using Accounts.Domain.Entities;
+﻿namespace Accounts.Application.Commands;
 
-namespace Accounts.Application.Commands;
-
-public record CreateAccount(Account Account) : ICommand;
+public record CreateAccount(Guid userId) : ICommand;

@@ -4,8 +4,10 @@ namespace Users.Core.Repositories;
 
 public interface IUserRepository
 {
-    Task Create(User user);
-    Task ChangeAsync(User user);
-    Task DeleteAsync(Guid id);
-    Task<User> GetAsync(Guid id);
+    Task<User> GetUser(Guid userId);
+    Task<List<User>> GetUsers();
+    Task AddUser(User user);
+    Task ChangeUser(User user);
+    Task AddAccountToUser(Guid accountId, Guid userId);
+    Task Populate();
 }

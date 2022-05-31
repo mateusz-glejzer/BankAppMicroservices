@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Users.Core.Entities;
-using Users.Infrastructure.Mongo.Entities;
+using Users.Infrastructure.Entities;
 
 namespace Users.Infrastructure.Profiles;
 

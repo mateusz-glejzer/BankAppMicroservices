@@ -1,6 +1,6 @@
 ﻿using Users.Core.Repositories;
 
-namespace Users.Application.Events.External.Handlers;
+namespace Users.Infrastructure.Events.External.Handlers;
 
 public class AccountCreatedHandler:IEventHandler<AccountCreated>
 {
@@ -13,8 +13,9 @@ public class AccountCreatedHandler:IEventHandler<AccountCreated>
 
     public async Task HandleAsync(AccountCreated @event)
     {
-        var user = await _repository.GetAsync(@event.UserId);
+        var user = await _repository.GetUser(@event.UserId);
         user.AddAccount(@event.BankAccountId);
-        //TODO update db
+        await _repository.ChangeUser(user);
+        
     }
 }
