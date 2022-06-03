@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-using Accounts.Application;
-using Accounts.Application.Commands;
+﻿using Accounts.Application.Commands;
 using Accounts.Application.Commands.Handlers;
 using Accounts.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -21,9 +19,12 @@ public class AccountController : ControllerBase
         _createAccountHandler = createAccountHandler;
     }
 
-    public async Task CreateAccount(Guid userId)
+    [HttpPost]
+    [Route("/api/add")]
+
+        public async Task CreateAccount(Guid userId)
     {
        await _createAccountHandler.HandleAsync(new CreateAccount(userId));
-       _publisher.Publish(JsonSerializer.Serialize(new AccountCreated()),"account_exchange",null);
+       
     }
 }

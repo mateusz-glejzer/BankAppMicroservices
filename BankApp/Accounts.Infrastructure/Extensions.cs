@@ -2,19 +2,23 @@
 using Accounts.Application.Commands.Handlers;
 using Accounts.Application.Queries;
 using Accounts.Domain.Entities;
+using Accounts.Domain.Repositories;
 using Accounts.Infrastructure.Handlers;
+using Accounts.Infrastructure.Repository;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Accounts.Infrastructure;
 
 public static class Extensions
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, string dbConnectionString)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        services.AddCommandHandler<CreateAccount, CreateAccountHandler>();
         services.AddCommandHandler<LockAccount, LockAccountHandler>();
         services.AddCommandHandler<UnlockAccount, UnlockAccountHandler>();
         services.AddQueryHandler<GetAccount,Account,GetAccountHandler>();
+        services.AddScoped<IAccountRepository, AccountRepository>();
         return services;
     }
 

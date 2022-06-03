@@ -12,7 +12,7 @@ public class AccountRepository:IAccountRepository
 
     public Task AddAsync(Guid userId)
     {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     public Task ChangeAsync(Account account)

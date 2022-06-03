@@ -13,6 +13,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0-preview.4.22229.4",
           "MongoDB.Bson": "2.15.1",
+          "Plain.RabbitMQ": "0.0.0.4",
           "Scrutor": "4.1.0",
           "Scrutor.AspNetCore": "3.3.0"
         },
@@ -442,6 +443,8 @@
           }
         }
       },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
       "MongoDB.Bson/2.15.1": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -450,6 +453,30 @@
           "lib/netstandard2.1/MongoDB.Bson.dll": {
             "assemblyVersion": "2.15.1.0",
             "fileVersion": "2.15.1.0"
+          }
+        }
+      },
+      "Plain.RabbitMQ/0.0.0.4": {
+        "dependencies": {
+          "RabbitMQ.Client": "6.2.1",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Plain.RabbitMQ.dll": {
+            "assemblyVersion": "0.0.0.4",
+            "fileVersion": "0.0.0.4"
+          }
+        }
+      },
+      "RabbitMQ.Client/6.2.1": {
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
           }
         }
       },
@@ -481,6 +508,12 @@
       "System.Buffers/4.5.1": {},
       "System.Diagnostics.DiagnosticSource/4.5.0": {},
       "System.Memory/4.5.4": {},
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Text.Encodings.Web/6.0.0": {
         "dependencies": {
@@ -493,12 +526,21 @@
           "System.Text.Encodings.Web": "6.0.0"
         }
       },
+      "System.Threading.Channels/4.7.1": {},
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Threading.Tasks.Extensions/4.5.1": {},
       "Accounts.Application/1.0.0": {
         "dependencies": {
           "Accounts.Domain": "1.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.0-preview.4.22229.2"
+          "Microsoft.EntityFrameworkCore": "7.0.0-preview.4.22229.2",
+          "Plain.RabbitMQ": "0.0.0.4"
         },
         "runtime": {
           "Accounts.Application.dll": {}
@@ -769,12 +811,40 @@
       "path": "microsoft.net.http.headers/2.2.0",
       "hashPath": "microsoft.net.http.headers.2.2.0.nupkg.sha512"
     },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
     "MongoDB.Bson/2.15.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-49pVb/uywkBO+XIouQcomdQ2ncmlzgpJjLHKxfpa7V7JMgEGa2ko21XSr56xj+Hg7nuIBVgoTGtcTj3uj6UGWw==",
       "path": "mongodb.bson/2.15.1",
       "hashPath": "mongodb.bson.2.15.1.nupkg.sha512"
+    },
+    "Plain.RabbitMQ/0.0.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y76uRX/71mzHiT0DUW2VFSH9YR6eSDzdtSxtEzpW4SRHgJQ/OulRVLoFmxYl4IFHIk9+eUwwqOz3JGbcu/NT6A==",
+      "path": "plain.rabbitmq/0.0.0.4",
+      "hashPath": "plain.rabbitmq.0.0.0.4.nupkg.sha512"
+    },
+    "RabbitMQ.Client/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kdcin0uz1b9xQPvlLOoa8Y2zQsfu7nRuTrcX02dCLVzwGVlsPp9AFgu1L3kRh4wSFEOGE03OVqpWKxaDlhuowQ==",
+      "path": "rabbitmq.client/6.2.1",
+      "hashPath": "rabbitmq.client.6.2.1.nupkg.sha512"
     },
     "Scrutor/4.1.0": {
       "type": "package",
@@ -811,6 +881,13 @@
       "path": "system.memory/4.5.4",
       "hashPath": "system.memory.4.5.4.nupkg.sha512"
     },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -831,6 +908,20 @@
       "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
       "path": "system.text.json/6.0.0",
       "hashPath": "system.text.json.6.0.0.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "path": "system.threading.channels/4.7.1",
+      "hashPath": "system.threading.channels.4.7.1.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "System.Threading.Tasks.Extensions/4.5.1": {
       "type": "package",
