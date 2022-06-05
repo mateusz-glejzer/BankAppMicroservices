@@ -17,9 +17,9 @@ public class UsersController : ControllerBase
 
     [HttpGet]
     [Route("getUser/{id}")]
-    public ActionResult GetUser(Guid id)
+    public async Task<ActionResult> GetUser(Guid id)
     {
-        var user = _repository.GetUser(id);
+        var user = await _repository.GetUser(id);
         return Ok(user);
     }
 
@@ -41,10 +41,9 @@ public class UsersController : ControllerBase
 
     [HttpDelete]
     [Route("deleteUser")]
-    public async Task<ActionResult> DeleteUser()
+    public Task<ActionResult> DeleteUser()
     {
         throw new NotImplementedException();
-        return Ok();
     }
 
     [HttpPut]

@@ -23,7 +23,7 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
         try
         {
             await _repository.AddAsync(command.userId);
-            _publisher.Publish(JsonSerializer.Serialize(new AccountCreated()),"account.exchange",null);
+            _publisher.Publish(JsonSerializer.Serialize(new AccountCreated(){UserId = command.userId,BankAccountId = new Guid()}),"account.exchange",null);
             _logger.LogInformation($"account created:{command.userId}");
             
         }

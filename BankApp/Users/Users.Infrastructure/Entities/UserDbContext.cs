@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Users.Infrastructure.Entities;
 
-namespace Users.Api;
+namespace Users.Infrastructure.Entities;
 
 public class UserDbContext : DbContext
 {
@@ -10,8 +9,10 @@ public class UserDbContext : DbContext
     }
 
     public DbSet<UserEntity> Users { get; set; }
-
+    public DbSet<UserAccount> UserAccounts { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<UserEntity>().HasMany(a => a.UserAccounts).WithOne(u=>u.UserEntity);
+        modelBuilder.Entity<UserAccount>().HasOne(a => a.UserEntity).WithMany(u => u.UserAccounts);
     }
 }
