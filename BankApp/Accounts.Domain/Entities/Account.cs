@@ -9,13 +9,13 @@ public class Account
     public Guid UserId { get; }
     public Currency Currency { get; }
     public BigInteger Balance { get; set; }
-    public bool IsLocked { get; set; }
+    
+    public AccountState State { get; set; }
 
     public Account(Guid userId, Currency currency)
     {
         UserId = userId;
         Currency = currency;
-        IsLocked = false;
         AccountId = new Guid();
     }
 }

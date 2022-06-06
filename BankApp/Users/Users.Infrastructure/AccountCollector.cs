@@ -31,7 +31,6 @@ public class AccountCollector : IHostedService
 
     private bool ProcessMessage(string message, IDictionary<string, object> headers)
     {
-        _logger.LogInformation("message ack");
         var @event = JsonConvert.DeserializeObject<AccountCreated>(message);
         _logger.LogInformation($"{@event.UserId} has new account {@event.BankAccountId}");
         using (var scope = _serviceProvider.CreateScope())

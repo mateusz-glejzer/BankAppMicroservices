@@ -1,4 +1,4 @@
-﻿namespace Users.Infrastructure.Entities;
+﻿namespace Accounts.Domain.Entities;
 
 public enum AccountState
 {

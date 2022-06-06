@@ -15,8 +15,8 @@ public static class Extensions
     {
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         services.AddCommandHandler<CreateAccount, CreateAccountHandler>();
-        services.AddCommandHandler<LockAccount, LockAccountHandler>();
-        services.AddCommandHandler<UnlockAccount, UnlockAccountHandler>();
+        services.AddCommandHandler<ChangeAccountState, ChangeAccountStateHandler>();
+        services.AddCommandHandler<ChangeBalance, ChangeBalanceHandler>();
         services.AddQueryHandler<GetAccount,Account,GetAccountHandler>();
         services.AddScoped<IAccountRepository, AccountRepository>();
         return services;
