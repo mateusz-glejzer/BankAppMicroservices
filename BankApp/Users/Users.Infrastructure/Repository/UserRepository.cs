@@ -4,6 +4,7 @@ using Users.Core.Entities;
 using Users.Core.Exceptions;
 using Users.Core.Repositories;
 using Users.Infrastructure.Entities;
+using AccountState = Users.Core.Entities.AccountState;
 
 namespace Users.Infrastructure.Repository;
 
@@ -71,6 +72,11 @@ public class UserRepository : IUserRepository
         });
         _context.SaveChanges();
         return Task.CompletedTask;
+    }
+
+    public Task ChangeAccountState(Guid accountId, AccountState state)
+    {
+        throw new NotImplementedException();
     }
 
     public async Task Populate()

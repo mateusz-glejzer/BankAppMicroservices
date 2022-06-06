@@ -15,7 +15,7 @@ public class GetAccountHandler : IQueryHandler<GetAccount, Account>
 
     public Task<Account> HandleAsync(GetAccount query)
     {
-        var userFromDb = _repository.GetAsync(query.UserId);
+        var userFromDb = _repository.GetAsync(query.AccountId);
         return userFromDb;
     }
 }

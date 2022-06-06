@@ -9,5 +9,6 @@ public interface IUserRepository
     Task AddUser(User user);
     Task ChangeUser(User user);
     Task AddAccountToUser(Guid accountId, Guid userId);
+    Task ChangeAccountState(Guid accountId, AccountState state);
     Task Populate();
 }

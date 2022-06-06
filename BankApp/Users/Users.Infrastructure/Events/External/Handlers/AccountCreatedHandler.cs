@@ -14,7 +14,7 @@ public class AccountCreatedHandler : IEventHandler<AccountCreated>
         this._logger = _logger;
     }
 
-    public Task HandleAsync(AccountCreated @event)
+    public Task Handle(AccountCreated @event)
     {
         _repository.AddAccountToUser(@event.BankAccountId, @event.UserId);
         _logger.LogInformation($"Account added:{@event.BankAccountId} to user {@event.UserId}");

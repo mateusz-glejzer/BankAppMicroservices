@@ -2,4 +2,4 @@
 
 namespace Accounts.Application.Queries;
 
-public record GetAccounts : IQuery<IReadOnlyList<Account>>;
+public record GetAccounts(Guid UserId) : IQuery<IReadOnlyList<Account>>;

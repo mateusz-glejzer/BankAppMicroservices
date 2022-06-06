@@ -26,7 +26,7 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
             var newAccount = new AccountCreated() {UserId = command.userId, BankAccountId = Guid.NewGuid()};
             var message = JsonConvert.SerializeObject(newAccount);
             
-            _publisher.Publish(message,"account.exchange",null);
+            _publisher.Publish(message,"account.create",null);
             _logger.LogInformation($"account created:{command.userId}");
             
         }
