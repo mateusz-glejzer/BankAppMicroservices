@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7wwmEh12lPZHeX5ZbGu/5rEygt3ODBPwWo3fF2W11cArpv+HJoGGyN1kjkElkuaSFBeh0UYD9nmph/tGrnv+Rg==",
+  "dgSpecHash": "0Y1rc0fqID/KY9nsHLPevLEvKNotlidUx2sF1Apl1y0MnHeSik2qm5djC9+ccqVxz3Qszhfez0Xg8sqzmxcSwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\MateuszGlejzer\\Desktop\\BankApi\\BankApp\\Accounts.Api\\Accounts.Api.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\mongodb.bson\\2.15.1\\mongodb.bson.2.15.1.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\newtonsoft.json\\13.0.2-beta1\\newtonsoft.json.13.0.2-beta1.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\plain.rabbitmq\\0.0.0.4\\plain.rabbitmq.0.0.0.4.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\MateuszGlejzer\\.nuget\\packages\\scrutor\\4.1.0\\scrutor.4.1.0.nupkg.sha512",

@@ -1,7 +1,7 @@
-﻿using System.Text.Json;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Plain.RabbitMQ;
 using Users.Infrastructure.Events.External;
 using Users.Infrastructure.Events.External.Handlers;
@@ -15,7 +15,7 @@ public class AccountCollector : IHostedService
     private readonly ILogger<AccountCollector> _logger;
     private readonly IServiceProvider _serviceProvider;
 
-    public AccountCollector(ISubscriber subscriber, ILogger<AccountCollector> logger,IServiceProvider serviceProvider)
+    public AccountCollector(ISubscriber subscriber, ILogger<AccountCollector> logger, IServiceProvider serviceProvider)
     {
         _subscriber = subscriber;
         _logger = logger;
@@ -24,19 +24,21 @@ public class AccountCollector : IHostedService
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        _subscriber.SubscribeAsync(ProcessMessage);
+        _subscriber.Subscribe(ProcessMessage);
+        _logger.LogInformation("collector is working");
         return Task.CompletedTask;
     }
 
-    private async Task<bool> ProcessMessage(string message, IDictionary<string, object> headers)
+    private bool ProcessMessage(string message, IDictionary<string, object> headers)
     {
-        var @event = JsonSerializer.Deserialize<AccountCreated>(message);
+        _logger.LogInformation("message ack");
+        var @event = JsonConvert.DeserializeObject<AccountCreated>(message);
+        _logger.LogInformation($"{@event.UserId} has new account {@event.BankAccountId}");
         using (var scope = _serviceProvider.CreateScope())
         {
-            var transientService = scope.ServiceProvider.GetRequiredService<AccountCreatedHandler>();
-            await transientService.HandleAsync(@event);
+            var accountCreatedHandler = scope.ServiceProvider.GetRequiredService<AccountCreatedHandler>();
+            accountCreatedHandler.HandleAsync(@event);
         }
-        _logger.LogInformation($"{@event.UserId} has new account {@event.BankAccountId}");
 
 
         return true;

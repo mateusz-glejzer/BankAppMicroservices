@@ -35,9 +35,4 @@ public class User : AggregateRoot
         Surname = surname;
         AddEvent(new ClientChangedSurname(this));
     }
-
-    public void AddAccount(Guid id)
-    {
-        Accounts.Add(id);
-    }
 }

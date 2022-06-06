@@ -17,7 +17,7 @@ builder.Services.AddSingleton<IConnectionProvider>(new ConnectionProvider("amqp:
 builder.Services.AddSingleton<ISubscriber>(x => new Subscriber(x.GetService<IConnectionProvider>(),
     "account_exchange",
     "account_queue",
-    "account.*",
+    "account.exchange",
     ExchangeType.Topic));
 builder.Services.AddHostedService<AccountCollector>();
 

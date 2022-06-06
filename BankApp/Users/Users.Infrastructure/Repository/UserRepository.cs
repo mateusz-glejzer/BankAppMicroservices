@@ -58,9 +58,9 @@ public class UserRepository : IUserRepository
         return Task.CompletedTask;
     }
 
-    public async Task AddAccountToUser(Guid accountId, Guid userId)
+    public Task AddAccountToUser(Guid accountId, Guid userId)
     {
-        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        var user = _context.Users.FirstOrDefault(u => u.Id == userId);
         if (user is null)
             throw new UserNotFoundException(userId);
         _context.UserAccounts.Add(new UserAccount()
@@ -69,7 +69,8 @@ public class UserRepository : IUserRepository
             AccountNumber = accountId,
             Id = new Guid()
         });
-        await _context.SaveChangesAsync();
+        _context.SaveChanges();
+        return Task.CompletedTask;
     }
 
     public async Task Populate()

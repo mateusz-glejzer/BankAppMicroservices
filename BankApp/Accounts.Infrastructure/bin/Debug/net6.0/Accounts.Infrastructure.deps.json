@@ -456,6 +456,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.2-beta1": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.26916"
+          }
+        }
+      },
       "Plain.RabbitMQ/0.0.0.4": {
         "dependencies": {
           "RabbitMQ.Client": "6.2.1",
@@ -540,6 +548,7 @@
           "Accounts.Domain": "1.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0-preview.4.22229.2",
+          "Newtonsoft.Json": "13.0.2-beta1",
           "Plain.RabbitMQ": "0.0.0.4"
         },
         "runtime": {
@@ -831,6 +840,13 @@
       "sha512": "sha512-49pVb/uywkBO+XIouQcomdQ2ncmlzgpJjLHKxfpa7V7JMgEGa2ko21XSr56xj+Hg7nuIBVgoTGtcTj3uj6UGWw==",
       "path": "mongodb.bson/2.15.1",
       "hashPath": "mongodb.bson.2.15.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.2-beta1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lrHT3bmqM13QHvgtj2Y30BCRsq6lX07klW5tScx2B7ihqWeG6aVXrHxVALN34+boed9ybVtlRFLOuKD44Xuttg==",
+      "path": "newtonsoft.json/13.0.2-beta1",
+      "hashPath": "newtonsoft.json.13.0.2-beta1.nupkg.sha512"
     },
     "Plain.RabbitMQ/0.0.0.4": {
       "type": "package",

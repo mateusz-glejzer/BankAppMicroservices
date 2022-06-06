@@ -186,3 +186,4 @@ C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users\Users.Api\obj\Debug\net6.0
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users\Users.Api\obj\Debug\net6.0\Users.Api.pdb
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users\Users.Api\obj\Debug\net6.0\Users.Api.genruntimeconfig.cache
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users\Users.Api\obj\Debug\net6.0\ref\Users.Api.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Users\Users.Api\bin\Debug\net6.0\Newtonsoft.Json.dll

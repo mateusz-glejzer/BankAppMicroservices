@@ -55,3 +55,4 @@ C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\Mi
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\Mono.TextTemplating.dll
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Api\bin\Debug\net6.0\Newtonsoft.Json.dll

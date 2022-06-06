@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Plain.RabbitMQ;
 using IAccountRepository = Accounts.Domain.Repositories.IAccountRepository;
 
@@ -23,7 +24,10 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
         try
         {
             await _repository.AddAsync(command.userId);
-            _publisher.Publish(JsonSerializer.Serialize(new AccountCreated(){UserId = command.userId,BankAccountId = new Guid()}),"account.exchange",null);
+            var newAccount = new AccountCreated() {UserId = command.userId, BankAccountId = Guid.NewGuid()};
+            var message = JsonConvert.SerializeObject(newAccount);
+            
+            _publisher.Publish(message,"account.exchange",null);
             _logger.LogInformation($"account created:{command.userId}");
             
         }

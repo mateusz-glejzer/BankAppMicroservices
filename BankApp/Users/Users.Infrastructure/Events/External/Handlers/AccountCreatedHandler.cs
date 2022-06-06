@@ -3,23 +3,21 @@ using Users.Core.Repositories;
 
 namespace Users.Infrastructure.Events.External.Handlers;
 
-public class AccountCreatedHandler:IEventHandler<AccountCreated>
+public class AccountCreatedHandler : IEventHandler<AccountCreated>
 {
     private readonly IUserRepository _repository;
     private readonly ILogger _logger;
 
-    public AccountCreatedHandler(IUserRepository repository,ILogger<AccountCreatedHandler> _logger)
+    public AccountCreatedHandler(IUserRepository repository, ILogger<AccountCreatedHandler> _logger)
     {
-         _repository = repository;
+        _repository = repository;
         this._logger = _logger;
     }
 
-    public async Task HandleAsync(AccountCreated @event)
+    public Task HandleAsync(AccountCreated @event)
     {
-        var user = await _repository.GetUser(@event.UserId);
-        user.AddAccount(@event.BankAccountId);
-        await _repository.ChangeUser(user);
+        _repository.AddAccountToUser(@event.BankAccountId, @event.UserId);
         _logger.LogInformation($"Account added:{@event.BankAccountId} to user {@event.UserId}");
-
+        return Task.CompletedTask;
     }
 }
