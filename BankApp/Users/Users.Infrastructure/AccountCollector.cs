@@ -46,7 +46,7 @@ public class AccountCollector : IHostedService
         if (message.Contains("changed"))
         {
             var @event = JsonConvert.DeserializeObject<AccountStateChanged>(message);
-            _logger.LogInformation($"{@event.AccountNumber} has changed it's state to{@event.AccountState}");
+            _logger.LogInformation($"{@event.AccountNumber} has changed it's state to {@event.AccountState}");
             using (var scope = _serviceProvider.CreateScope())
             {
                 var accountCreatedHandler = scope.ServiceProvider.GetRequiredService<AccountStateChangedHandler>();

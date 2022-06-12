@@ -8,7 +8,7 @@ namespace Accounts.Domain.Repositories;
 public interface IAccountRepository
 {
     Task<Account> GetAsync(Guid id);
-    Task AddAsync(Guid userId);
+    Task<Guid> AddAsync(Guid userId,Currency currency);
     Task ChangeAsync(Account account);
     Task DeleteAsync(Account account);
     Task<IReadOnlyList<Account>> BrowseAsync();

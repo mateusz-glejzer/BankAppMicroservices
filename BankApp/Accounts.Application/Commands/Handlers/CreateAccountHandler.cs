@@ -11,7 +11,8 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
     private readonly IAccountRepository _repository;
     private readonly ILogger<CreateAccountHandler> _logger;
 
-    public CreateAccountHandler(IAccountRepository repository,ILogger<CreateAccountHandler> logger, IPublisher publisher)
+    public CreateAccountHandler(IAccountRepository repository, ILogger<CreateAccountHandler> logger,
+        IPublisher publisher)
     {
         _repository = repository;
         _logger = logger;
@@ -22,19 +23,17 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
     {
         try
         {
-            await _repository.AddAsync(command.userId);
-            var newAccount = new AccountCreated() {UserId = command.userId, BankAccountId = Guid.NewGuid()};
+            var accountId = await _repository.AddAsync(command.UserId, command.Currency);
+            var newAccount = new AccountCreated() {UserId = command.UserId, BankAccountId = accountId};
             var message = JsonConvert.SerializeObject(newAccount);
-            
-            _publisher.Publish(message,"account.create",null);
-            _logger.LogInformation($"account created:{command.userId}");
-            
+
+            _publisher.Publish(message, "account.create", null);
+            _logger.LogInformation($"account created:{command.UserId}");
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-        
     }
 }

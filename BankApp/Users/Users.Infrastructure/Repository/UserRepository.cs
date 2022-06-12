@@ -58,7 +58,7 @@ public class UserRepository : IUserRepository
         _context.SaveChanges();
         return Task.CompletedTask;
     }
-
+    
     public Task AddAccountToUser(Guid accountId, Guid userId)
     {
         var user = _context.Users.FirstOrDefault(u => u.Id == userId);
@@ -78,13 +78,5 @@ public class UserRepository : IUserRepository
     {
         throw new NotImplementedException();
     }
-
-    public async Task Populate()
-    {
-        for (int i = 0; i < 20; i++)
-        {
-            var newUser = new User($"john{i}", $"johnsky{i}", $"email{i}");
-            await AddUser(newUser);
-        }
-    }
+    
 }

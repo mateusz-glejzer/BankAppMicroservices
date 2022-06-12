@@ -16,27 +16,20 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    [Route("getUser/{id}")]
-    public async Task<ActionResult> GetUser(Guid id)
+    [Route("getUser")]
+    public async Task<ActionResult> GetUser([FromForm] Guid id)
     {
         var user = await _repository.GetUser(id);
         return Ok(user);
     }
 
-    [HttpPost]
-    [Route("populate")]
-    public async Task<ActionResult> Populate()
-    {
-        await _repository.Populate();
-        return Ok();
-    }
 
     [HttpGet]
     [Route("getUsers")]
-    public ActionResult GetUsers()
+    public string GetUsers()
     {
-        var users = _repository.GetUsers();
-        return Ok(users);
+        //var users = _repository.GetUsers();
+        return "test";
     }
 
     [HttpDelete]
@@ -48,7 +41,7 @@ public class UsersController : ControllerBase
 
     [HttpPut]
     [Route("changeUser")]
-    public async Task<ActionResult> ChangeUser(User user)
+    public async Task<ActionResult> ChangeUser([FromForm] User user)
     {
         await _repository.ChangeUser(user);
         return Ok();
@@ -56,7 +49,7 @@ public class UsersController : ControllerBase
 
     [HttpPost]
     [Route("addUser")]
-    public async Task<ActionResult> AddUser(User user)
+    public async Task<ActionResult> AddUser([FromBody] User user)
     {
         await _repository.AddUser(user);
         return Ok();

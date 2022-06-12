@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Fb5fOcP/dWEBUW0DfbhWbFSnFUXZg5g82BbJD6kFwpo=",
+  "Source": "BankApp.ApiGateway",
+  "BasePath": "_content/BankApp.ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

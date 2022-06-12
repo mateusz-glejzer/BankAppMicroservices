@@ -15,3 +15,5 @@ C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debu
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debug\net6.0\Accounts.Application.pdb
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debug\net6.0\Accounts.Domain.pdb
 C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\obj\Debug\net6.0\Accounts.Infrastructure.csproj.CopyComplete
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\bin\Debug\net6.0\Accounts.Infrastructure.runtimeconfig.json
+C:\Users\MateuszGlejzer\Desktop\BankApi\BankApp\Accounts.Infrastructure\obj\Debug\net6.0\Accounts.Infrastructure.genruntimeconfig.cache

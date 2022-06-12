@@ -2,28 +2,22 @@
 using Accounts.Application.Commands;
 using Accounts.Application.Commands.Handlers;
 using Accounts.Application.Queries;
-using Accounts.Domain.Repositories;
+using Accounts.Domain.Entities;
 using Accounts.Infrastructure.Handlers;
 using Microsoft.AspNetCore.Mvc;
-using Plain.RabbitMQ;
 
 namespace Accounts.Api.Controllers;
 
 public class AccountController : ControllerBase
 {
-    private readonly IPublisher _publisher;
-    private readonly IAccountRepository _repository;
     private readonly CreateAccountHandler _createAccountHandler;
     private readonly GetAccountsHandler _getAccountsHandler;
     private readonly ChangeBalanceHandler _changeBalanceHandler;
     private readonly GetAccountHandler _getAccountHandler;
 
-    public AccountController(IPublisher publisher, IAccountRepository repository,
-        CreateAccountHandler createAccountHandler, GetAccountHandler getAccountHandler,
+    public AccountController(CreateAccountHandler createAccountHandler, GetAccountHandler getAccountHandler,
         GetAccountsHandler getAccountsHandler, ChangeBalanceHandler changeBalanceHandler)
     {
-        _publisher = publisher;
-        _repository = repository;
         _createAccountHandler = createAccountHandler;
         _getAccountsHandler = getAccountsHandler;
         _changeBalanceHandler = changeBalanceHandler;
@@ -31,29 +25,29 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost]
-    [Route("/api/add")]
-    public async Task CreateAccount(Guid userId)
+    [Route("/api/addAccount")]
+    public async Task CreateAccount([FromForm]Guid userId, [FromForm]Currency currency)
     {
-        await _createAccountHandler.HandleAsync(new CreateAccount(userId));
+        await _createAccountHandler.HandleAsync(new CreateAccount(userId, currency));
     }
 
     [HttpGet]
-    [Route("/api/getAccount/{id:guid}")]
-    public async Task GetAccount(Guid id)
+    [Route("/api/getAccount")]
+    public async Task GetAccount([FromForm]Guid id)
     {
         await _getAccountHandler.HandleAsync(new GetAccount(id));
     }
 
     [HttpGet]
-    [Route("/api/getAccounts/{id:guid}")]
-    public async Task GetAccounts(Guid id)
+    [Route("/api/getAccounts")]
+    public async Task GetAccounts([FromForm]Guid id)
     {
         await _getAccountsHandler.HandleAsync(new GetAccounts(id));
     }
 
     [HttpPost]
-    [Route("/api/changeBalance/{amount}")]
-    public async Task ChangeBalance(Guid accountNumber, BigInteger amount)
+    [Route("/api/changeBalance")]
+    public async Task ChangeBalance([FromForm]Guid accountNumber, [FromForm]BigInteger amount)
     {
         await _changeBalanceHandler.HandleAsync(new ChangeBalance(accountNumber, amount));
     }
