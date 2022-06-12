@@ -27,7 +27,7 @@
       "DangerousAcceptAnyServerCertificateValidator": true
     },
     {
-      "DownstreamPathTemplate": "/api/users/addUser",
+      "DownstreamPathTemplate": "/api/users/addUser/{user}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {

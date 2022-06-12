@@ -48,7 +48,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpPost]
-    [Route("addUser")]
+    [Route("addUser/{user}")]
     public async Task<ActionResult> AddUser([FromBody] User user)
     {
         await _repository.AddUser(user);
