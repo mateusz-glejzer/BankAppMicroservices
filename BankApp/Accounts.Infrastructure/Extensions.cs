@@ -16,6 +16,7 @@ public static class Extensions
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         services.AddCommandHandler<CreateAccount, CreateAccountHandler, Guid>();
         services.AddQueryHandler<GetAccount, Account, GetAccountHandler>();
+        services.AddQueryHandler<GetUserAccounts, IEnumerable<Guid>, GetUserAccountsHandler>();
         services.AddScoped<IAccountRepository, AccountRepository>();
         return services;
     }

@@ -11,11 +11,14 @@ public class AccountController : ControllerBase
 {
     private readonly CreateAccountHandler _createAccountHandler;
     private readonly GetAccountHandler _getAccountHandler;
+    private readonly GetUserAccountsHandler _getUserAccountsHandler;
 
-    public AccountController(CreateAccountHandler createAccountHandler, GetAccountHandler getAccountHandler)
+    public AccountController(CreateAccountHandler createAccountHandler, GetAccountHandler getAccountHandler,
+        GetUserAccountsHandler getUserAccountsHandler)
     {
         _createAccountHandler = createAccountHandler;
         _getAccountHandler = getAccountHandler;
+        _getUserAccountsHandler = getUserAccountsHandler;
     }
 
     [HttpPost]
@@ -31,5 +34,12 @@ public class AccountController : ControllerBase
     public async Task<Account> GetAccount([FromBody] Guid id)
     {
         return await _getAccountHandler.HandleAsync(new GetAccount(id));
+    }
+
+    [HttpGet]
+    [Route("/api/getUserAccounts")]
+    public async Task<IEnumerable<Guid>> GetUserAccounts([FromBody] Guid id)
+    {
+        return await _getUserAccountsHandler.HandleAsync(new GetUserAccounts(id));
     }
 }

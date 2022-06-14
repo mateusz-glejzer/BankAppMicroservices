@@ -31,6 +31,11 @@ public class AccountRepository : IAccountRepository
         }
     }
 
+    public Task<IEnumerable<Guid>> GetUserAccountsAsync(Guid userId)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<Guid> AddAsync(Guid userId, Currency currency)
     {
         var newAccount = new Account(userId, currency);
