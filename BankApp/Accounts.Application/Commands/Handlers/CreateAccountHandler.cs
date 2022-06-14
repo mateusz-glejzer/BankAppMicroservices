@@ -5,7 +5,7 @@ using IAccountRepository = Accounts.Domain.Repositories.IAccountRepository;
 
 namespace Accounts.Application.Commands.Handlers;
 
-public class CreateAccountHandler : ICommandHandler<CreateAccount>
+public class CreateAccountHandler : ICommandHandler<CreateAccount, Guid>
 {
     private readonly IPublisher _publisher;
     private readonly IAccountRepository _repository;
@@ -19,7 +19,7 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
         _publisher = publisher;
     }
 
-    public async Task HandleAsync(CreateAccount command)
+    public async Task<Guid> HandleAsync(CreateAccount command)
     {
         try
         {
@@ -29,11 +29,12 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
 
             _publisher.Publish(message, "account.create", null);
             _logger.LogInformation($"account created:{command.UserId}");
+            return newAccount.UserId;
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
-            throw;
+            _logger.LogError(e.Message);
+            return Guid.Empty;
         }
     }
 }

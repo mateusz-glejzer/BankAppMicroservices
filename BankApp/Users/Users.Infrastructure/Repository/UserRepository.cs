@@ -4,7 +4,6 @@ using Users.Core.Entities;
 using Users.Core.Exceptions;
 using Users.Core.Repositories;
 using Users.Infrastructure.Entities;
-using AccountState = Users.Core.Entities.AccountState;
 
 namespace Users.Infrastructure.Repository;
 
@@ -49,16 +48,20 @@ public class UserRepository : IUserRepository
 
     public Task ChangeUser(User user)
     {
-        //TODO changing logic is missing
         var userInDb = _context.Users.FirstOrDefault(u => u.Id == user.Id);
         if (userInDb is null)
             throw new UserNotFoundException(user.Id);
 
-        _context.Update(user);
+        userInDb.Name = user.Name;
+        userInDb.Surname = user.Surname;
+        userInDb.Email = user.Email;
+
+
+        _context.Update(userInDb);
         _context.SaveChanges();
         return Task.CompletedTask;
     }
-    
+
     public Task AddAccountToUser(Guid accountId, Guid userId)
     {
         var user = _context.Users.FirstOrDefault(u => u.Id == userId);
@@ -73,10 +76,4 @@ public class UserRepository : IUserRepository
         _context.SaveChanges();
         return Task.CompletedTask;
     }
-
-    public Task ChangeAccountState(Guid accountId, AccountState state)
-    {
-        throw new NotImplementedException();
-    }
-    
 }

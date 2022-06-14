@@ -17,7 +17,7 @@ public class UsersController : ControllerBase
 
     [HttpGet]
     [Route("getUser")]
-    public async Task<ActionResult> GetUser([FromForm] Guid id)
+    public async Task<ActionResult> GetUser([FromBody] Guid id)
     {
         var user = await _repository.GetUser(id);
         return Ok(user);
@@ -41,7 +41,7 @@ public class UsersController : ControllerBase
 
     [HttpPut]
     [Route("changeUser")]
-    public async Task<ActionResult> ChangeUser([FromForm] User user)
+    public async Task<ActionResult> ChangeUser([FromBody] User user)
     {
         await _repository.ChangeUser(user);
         return Ok();

@@ -14,21 +14,19 @@ public static class Extensions
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-        services.AddCommandHandler<CreateAccount, CreateAccountHandler>();
-        services.AddCommandHandler<ChangeAccountState, ChangeAccountStateHandler>();
-        services.AddCommandHandler<ChangeBalance, ChangeBalanceHandler>();
-        services.AddQueryHandler<GetAccount,Account,GetAccountHandler>();
+        services.AddCommandHandler<CreateAccount, CreateAccountHandler, Guid>();
+        services.AddQueryHandler<GetAccount, Account, GetAccountHandler>();
         services.AddScoped<IAccountRepository, AccountRepository>();
         return services;
     }
 
-    private static IServiceCollection AddCommandHandler<TCommand, TCommandHandler>(
+    private static IServiceCollection AddCommandHandler<TCommand, TCommandHandler, T>(
         this IServiceCollection services
     )
-        where TCommandHandler : class, ICommandHandler<TCommand> where TCommand : class, ICommand
+        where TCommandHandler : class, ICommandHandler<TCommand, T> where TCommand : class, ICommand
     {
         return services.AddTransient<TCommandHandler>()
-            .AddTransient<ICommandHandler<TCommand>>(sp => sp.GetRequiredService<TCommandHandler>());
+            .AddTransient<ICommandHandler<TCommand, T>>(sp => sp.GetRequiredService<TCommandHandler>());
     }
 
     private static IServiceCollection AddQueryHandler<TQuery, TQueryResult, TQueryHandler>(

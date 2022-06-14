@@ -1,7 +1,7 @@
 ﻿namespace Accounts.Application.Commands.Handlers;
 
-public interface ICommandHandler<in TCommand>
+public interface ICommandHandler<in TCommand,T>
     where TCommand : class, ICommand
 {
-    Task HandleAsync(TCommand command);
+    Task<T> HandleAsync(TCommand command);
 }

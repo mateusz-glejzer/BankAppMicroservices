@@ -18,35 +18,23 @@ public class AccountRepository : IAccountRepository
 
     public async Task<Account> GetAsync(Guid id)
     {
-        var account = await _context.Accounts.FirstOrDefaultAsync(account => account.AccountId == id);
-        if (account is null)
+        try
         {
-            //TODO implement this exception
-            throw new Exception($"There is no account with Id: {id}");
-        }
+            var account = await _context.Accounts.FirstAsync(account => account.AccountId == id);
 
-        return _mapper.Map<Account>(account);
+            return _mapper.Map<Account>(account);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
-    public async Task<Guid> AddAsync(Guid userId,Currency currency)
+    public async Task<Guid> AddAsync(Guid userId, Currency currency)
     {
         var newAccount = new Account(userId, currency);
         await _context.Accounts.AddAsync(newAccount);
         return newAccount.AccountId;
-    }
-
-    public Task ChangeAsync(Account account)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task DeleteAsync(Account account)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<IReadOnlyList<Account>> BrowseAsync()
-    {
-        throw new NotImplementedException();
     }
 }

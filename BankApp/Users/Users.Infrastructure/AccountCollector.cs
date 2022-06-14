@@ -3,7 +3,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Plain.RabbitMQ;
-using Users.Infrastructure.Events;
 using Users.Infrastructure.Events.External;
 using Users.Infrastructure.Events.External.Handlers;
 
@@ -39,17 +38,6 @@ public class AccountCollector : IHostedService
             using (var scope = _serviceProvider.CreateScope())
             {
                 var accountCreatedHandler = scope.ServiceProvider.GetRequiredService<AccountCreatedHandler>();
-                accountCreatedHandler.Handle(@event);
-            }
-        }
-
-        if (message.Contains("changed"))
-        {
-            var @event = JsonConvert.DeserializeObject<AccountStateChanged>(message);
-            _logger.LogInformation($"{@event.AccountNumber} has changed it's state to {@event.AccountState}");
-            using (var scope = _serviceProvider.CreateScope())
-            {
-                var accountCreatedHandler = scope.ServiceProvider.GetRequiredService<AccountStateChangedHandler>();
                 accountCreatedHandler.Handle(@event);
             }
         }
