@@ -1,4 +1,4 @@
-﻿using Accounts.Domain.Entities;
+﻿using Accounts.Infrastructure.Dto;
 using Microsoft.EntityFrameworkCore;
 
 namespace Accounts.Infrastructure.Repository;
@@ -9,7 +9,7 @@ public class AccountDbContext : DbContext
     {
     }
 
-    public DbSet<Account> Accounts { get; set; }
+    public DbSet<AccountDto> Accounts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -1,12 +1,14 @@
-﻿using System.Numerics;
+﻿using System.ComponentModel.DataAnnotations;
+using Accounts.Domain.Entities;
 
 namespace Accounts.Infrastructure.Dto;
 
 public class AccountDto
 {
-    public Guid AccountId { get; set; }
+    [Key] public Guid AccountId { get; set; }
     public Guid UserId { get; set; }
-    public CurrencyDto Currency { get; set; }
-    public BigInteger Balance { get; set; }
-    public bool IsLocked { get; set; }
+    public Currency Currency { get; }
+    public Double Balance { get; set; }
+
+    public AccountState State { get; set; }
 }

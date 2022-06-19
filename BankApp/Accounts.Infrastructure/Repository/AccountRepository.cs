@@ -1,5 +1,6 @@
 ﻿using Accounts.Domain.Entities;
 using Accounts.Domain.Repositories;
+using Accounts.Infrastructure.Dto;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,7 +40,8 @@ public class AccountRepository : IAccountRepository
     public async Task<Guid> AddAsync(Guid userId, Currency currency)
     {
         var newAccount = new Account(userId, currency);
-        await _context.Accounts.AddAsync(newAccount);
+         var newAccountDto = _mapper.Map<AccountDto>(newAccount);
+        await _context.Accounts.AddAsync(newAccountDto);
         return newAccount.AccountId;
     }
 }
