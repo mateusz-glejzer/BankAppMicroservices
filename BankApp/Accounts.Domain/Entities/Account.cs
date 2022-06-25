@@ -15,6 +15,6 @@ public class Account
     {
         UserId = userId;
         Currency = currency;
-        AccountId = new Guid();
+        AccountId = Guid.NewGuid();
     }
 }
