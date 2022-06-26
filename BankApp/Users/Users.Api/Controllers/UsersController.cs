@@ -26,10 +26,9 @@ public class UsersController : ControllerBase
 
     [HttpGet]
     [Route("getUsers")]
-    public string GetUsers()
+    public async Task<List<User>> GetUsers()
     {
-        //var users = _repository.GetUsers();
-        return "test";
+        return await _repository.GetUsers();
     }
 
     [HttpDelete]
